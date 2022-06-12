@@ -22,14 +22,40 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.css",
+              "src/assets/css/slick.css",
+              "src/assets/css/all.css",
+              "src/assets/css/prettyPhoto.css",
+              "src/assets/css/owl.carousel.min.css",
+              "src/assets/css/animate.css",
+              "src/assets/css/animate.min.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/ngx-spinner/animations/ball-scale-multiple.css",
+              "node_modules/uikit/dist/css/uikit.min.css",
+              "node_modules/uikit/dist/css/uikit-core.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/custom.js",
+              "src/assets/js/slick.min.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/isotope.pkgd.min.js",
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/jquery.countdown.js",
+              "src/assets/js/jquery.prettyPhoto.js",
+              "src/assets/js/rev-slider.js",
+              "src/assets/js/wow.min.js",
+              "src/assets/js/navbar.js",
+              "src/assets/js/jquery.min.js",
+              "node_modules/uikit/dist/js/uikit.min.js",
+              "node_modules/uikit/dist/js/uikit-icons.min.js",
+              "node_modules/sweetalert2/dist/sweetalert2.js",
+              "node_modules/moment/min/moment.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -89,18 +115,20 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/animate.css/animate.css",
+
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/bootstrap/dist/js/bootstrap.min.js"]
           }
         }
       }
     }
   },
-  "defaultProject": "frontend"
+  "cli": {
+    "analytics": "0db05062-147d-417d-8e92-3e32bf3d672e"
+  }
 }

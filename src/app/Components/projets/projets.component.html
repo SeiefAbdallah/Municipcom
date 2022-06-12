@@ -1,0 +1,92 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="page-heading header-text" style="text-align: center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Nos projets</h1>
+            <span>Découvrir nos projets municipaux!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Sub Header End-->
+    <div class="main-content p80">
+      <!--Causes Page Start-->
+      <div class="causes-listing">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12" *ngFor="let p of projet">
+              <!--Cause start -->
+              <div class="campaign-box">
+                <div class="campaign-thumb">
+                  <a href="#"><i class="fas fa-link"></i></a>
+                  <!-- <img
+                    [src]="
+                      p.image
+                        ? path + p.image
+                        : '../../../assets/images/no-image.jpg'
+                    "
+                    alt=""
+                  /> -->
+                  <img
+                    src="{{ path }}{{ p.image }}"
+                    alt="Responsive image"
+                    style="height: 280px; width: 400px"
+                    class="img-fluid img-thumbnail"
+                  />
+                  <form class="myform" (click)="clickEvent()">
+                    <button
+                      type="submit"
+                      class="vote-btn"
+                      data-default-text="Vote This Dish Up!"
+                      data-alt-text="Thanks for Voting"
+                    >
+                      <span class="icon" *ngIf="loggedIn()"></span>
+                      <span class="text" *ngIf="loggedIn()">Vote !</span>
+                    </button>
+                  </form>
+                </div>
+                <div class="campaign-txt">
+                  <h4>
+                    <a href="#">{{ p.nom }}</a>
+                  </h4>
+                  <p>
+                    {{ p.sujet }}
+                  </p>
+
+                  <div class="container" *ngIf="loggedIn()">
+                    <a
+                      routerLink="/projetsn/{{ p.id }}"
+                      class="btn btn-lg btn-outline-primary"
+                    >
+                      Lisez plus
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!--Cause end -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Causes Page End-->
+    </div>
+    <!--Main Content End-->
+  </body>
+</html>
+
+<!--Main Content End-->

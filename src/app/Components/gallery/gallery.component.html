@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>CSS Gallery</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:600,900"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <p class="heading">CSS Gallery</p>
+    <div class="gallery-image">
+      <div class="img-box">
+        <img src="https://picsum.photos/350/250?image=444" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Library</p>
+            <p class="opacity-low">Architect Design</p>
+          </div>
+        </div>
+      </div>
+      <div class="img-box" *ngFor="let p of photo">
+        <img src="{{ path }}{{ p.image }}" alt="" />
+        <div class="transparent-box">
+          <div class="caption">
+            <p>{{ p.created_at }}</p>
+            <p class="opacity-low">{{ p.nom }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

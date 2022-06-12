@@ -1,0 +1,240 @@
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <div
+        class="login100-form-title"
+        style="background-image: url(../../../../assets/images/bg-01.jpg)"
+      >
+        <span class="login100-form-title-1"> S'Inscrire </span>
+      </div>
+
+      <form
+        class="login100-form validate-form"
+        [formGroup]="form"
+        (ngSubmit)="onSubmit()"
+      >
+        <div
+          class="wrap-input100 validate-input m-b-26"
+          data-validate="Cin is required"
+        >
+          <span class="label-input100">Votre Cin :</span>
+          <input
+            formControlName="cin"
+            type="cin"
+            class="form-control"
+            name="cin"
+            placeholder="Cin"
+            required="required"
+            [ngClass]="{ 'is-invalid': submitted && f['cin'].errors }"
+          />
+          <div *ngIf="submitted && f['cin'].errors" class="invalid-feedback">
+            <div style="text-align: left" *ngIf="f['cin'].errors['required']">
+              Cin is required
+            </div>
+            <div style="text-align: left" *ngIf="f['cin'].errors['cin']">
+              Cin is invalid
+            </div>
+          </div>
+
+          <span class="focus-input100"></span>
+        </div>
+        <div
+          class="wrap-input100 validate-input m-b-26"
+          data-validate="Nom is required"
+        >
+          <span class="label-input100">Votre Nom et prénom:</span>
+          <input
+            formControlName="name"
+            type="text"
+            class="form-control"
+            name="name"
+            placeholder="Name"
+            required="required"
+            [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"
+          />
+          <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+            <div style="text-align: left" *ngIf="f['name'].errors['required']">
+              name is required
+            </div>
+            <div style="text-align: left" *ngIf="f['name'].errors['cin']">
+              name is invalid
+            </div>
+          </div>
+
+          <span class="focus-input100"></span>
+        </div>
+
+        <div
+          class="wrap-input100 validate-input m-b-26"
+          data-validate="email is required"
+        >
+          <span class="label-input100">Email :</span>
+          <input
+            formControlName="email"
+            type="email"
+            class="form-control"
+            name="email"
+            placeholder="Entrer votre Email"
+            required="required"
+            [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+          />
+          <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+            <div style="text-align: left" *ngIf="f['email'].errors['required']">
+              Email is required
+            </div>
+            <div style="text-align: left" *ngIf="f['email'].errors['email']">
+              Email is invalid
+            </div>
+          </div>
+          <span class="focus-input100"></span>
+        </div>
+        <div
+          class="wrap-input100 validate-input m-b-26"
+          data-validate="tel is required"
+        >
+          <span class="label-input100">Numéro tel :</span>
+          <input
+            formControlName="tel"
+            type="tel"
+            class="form-control"
+            name="tel"
+            placeholder="Entrer votre telelphone"
+            required="required"
+            [ngClass]="{ 'is-invalid': submitted && f['tel'].errors }"
+          />
+          <div *ngIf="submitted && f['tel'].errors" class="invalid-feedback">
+            <div style="text-align: left" *ngIf="f['tel'].errors['required']">
+              tel is required
+            </div>
+            <div style="text-align: left" *ngIf="f['tel'].errors['minlength']">
+              tel must be at least 6 characters
+            </div>
+          </div>
+          <span class="focus-input100"></span>
+        </div>
+        <div
+          class="wrap-input100 validate-input m-b-26"
+          data-validate="adresse is required"
+        >
+          <span class="label-input100">Votre Adresse :</span>
+          <input
+            formControlName="adresse"
+            type="text"
+            class="form-control"
+            name="adresse"
+            placeholder="adresse"
+            required="required"
+            [ngClass]="{ 'is-invalid': submitted && f['adresse'].errors }"
+          />
+          <div
+            *ngIf="submitted && f['adresse'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              style="text-align: left"
+              *ngIf="f['adresse'].errors['required']"
+            >
+              adresse is required
+            </div>
+          </div>
+
+          <span class="focus-input100"></span>
+        </div>
+        <div
+          class="wrap-input100 validate-input m-b-18"
+          data-validate="Password is required"
+        >
+          <span class="label-input100">Mot de passe</span>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            placeholder="Entrer votre mot de passe"
+            required="required"
+            formControlName="password"
+            [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+          />
+          <div
+            *ngIf="submitted && f['password'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              style="text-align: left"
+              *ngIf="f['password'].errors['required']"
+            >
+              Password is required
+            </div>
+            <div
+              style="text-align: left"
+              *ngIf="f['password'].errors['minlength']"
+            >
+              Password must be at least 6 characters
+            </div>
+            <div
+              style="text-align: left"
+              *ngIf="f['password'].errors['maxlength']"
+            ></div>
+          </div>
+          <span class="focus-input100"></span>
+        </div>
+
+        <div
+          class="wrap-input100 validate-input m-b-18"
+          data-validate="Password is required"
+        >
+          <span class="label-input100">Mot de passe</span>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            placeholder="Confirm Password"
+            required="required"
+            formControlName="confirmPassword"
+            [ngClass]="{
+              'is-invalid': submitted && f['confirmPassword'].errors
+            }"
+          />
+          <div
+            *ngIf="submitted && f['confirmPassword'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              style="text-align: left"
+              *ngIf="f['confirmPassword'].errors['required']"
+            >
+              Password is required
+            </div>
+            <div
+              style="text-align: left"
+              *ngIf="f['confirmPassword'].errors['minlength']"
+            >
+              Password must be at least 6 characters
+            </div>
+            <div
+              style="text-align: left"
+              *ngIf="f['confirmPassword'].errors['match']"
+            >
+              password must match
+            </div>
+          </div>
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="flex-sb-m w-full p-b-30">
+          <div class="contact100-form-checkbox">
+            <span href="">Already had an account?</span
+            ><a href="login">login</a>
+          </div>
+
+          <div>
+            <a href="forgetPassword" class="txt1"> Forgot Password? </a>
+          </div>
+        </div>
+
+        <div class="container-login100-form-btn">
+          <button class="login100-form-btn">S'inscrire</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,253 @@
+@import url("../../../assets/css/custom.css");
+@import url("../../../assets/css/all.css");
+@import url("../../../assets/css/color.css");
+@import url("../../../assets/css/slick.css");
+@import url("../../../assets/css/animate.css");
+@import url("../../../assets/css/owl.carousel.min.css");
+@import url("../../../assets/css/prettyPhoto.css");
+@import url("../../../assets/css/responsive.css");
+@import url("../../../assets/css/bootstrap.min.css");
+.page-heading {
+  text-align: center;
+  background-image: url(../../../assets/images/page-heading-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 0px 0px;
+  color: #04aa6d;
+}
+
+.page-heading h1 {
+  text-transform: capitalize;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+  color: #04aa6d;
+}
+
+.page-heading span {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  display: block;
+}
+h4 {
+  margin: 2rem 0rem;
+}
+.panel {
+  border-radius: 4px;
+  padding: 1rem;
+  margin-top: 0.2rem;
+  background-color: #f5f5f5;
+  color: #323b40;
+}
+.panel.panel-blue {
+  background-color: #e0f5ff;
+  color: #00a5fa;
+}
+.panel.panel-big-height {
+  min-height: 150px;
+}
+.item {
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin: 0.2rem;
+}
+.item.item-blue {
+  background-color: #b9e5fe;
+  color: #00a5fa;
+}
+.item.item-green {
+  background-color: #b7e0dc;
+  color: #019888;
+}
+.item.item-lime {
+  background-color: #c7e8c8;
+  color: #42b045;
+}
+.item.item-yellow {
+  background-color: #ffeeba;
+  color: #ff9901;
+}
+.item.item-pink {
+  background-color: #fabad0;
+  color: #ef075f;
+}
+.item.item-red {
+  background-color: #fec9c6;
+  color: #fd3d08;
+}
+.item.item-big-width {
+  min-width: 380px;
+}
+body {
+  background: #fdfdfd;
+  font-family: "Segoe WP", "Segoe UI", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+h1,
+h2 {
+  color: #888;
+  margin: 0;
+  font-weight: normal;
+}
+h1 {
+  padding-top: 1.5em;
+  padding-bottom: 2em;
+}
+h2 {
+  clear: both;
+  color: #aaa;
+  padding: 2em 0 0.3em;
+}
+em {
+  display: block;
+  margin: 0.5em auto 2em;
+  color: #bbb;
+}
+
+p,
+p a {
+  color: #aaa;
+  text-decoration: none;
+}
+p a:hover,
+p a:focus {
+  text-decoration: underline;
+}
+p + p {
+  color: #bbb;
+  margin-top: 2em;
+}
+.detail {
+  position: absolute;
+  text-align: right;
+  right: 5px;
+  bottom: 5px;
+  width: 50%;
+}
+
+a[href*="intent"] {
+  display: inline-block;
+  margin-top: 0.4em;
+}
+
+/*  
+ * Rating styles
+ */
+.rating {
+  width: 226px;
+  margin: 0 auto 1em;
+  font-size: 45px;
+  overflow: hidden;
+}
+.rating input {
+  float: right;
+  opacity: 0;
+  position: absolute;
+}
+.rating a,
+.rating label {
+  float: right;
+  color: #aaa;
+  text-decoration: none;
+  -webkit-transition: color 0.4s;
+  -moz-transition: color 0.4s;
+  -o-transition: color 0.4s;
+  transition: color 0.4s;
+}
+.rating label:hover ~ label,
+.rating input:focus ~ label,
+.rating label:hover,
+.rating a:hover,
+.rating a:hover ~ a,
+.rating a:focus,
+.rating a:focus ~ a {
+  color: orange;
+  cursor: pointer;
+}
+.rating2 {
+  direction: rtl;
+}
+.rating2 a {
+  float: none;
+}
+@keyframes bump1 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bump2 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.vote-count {
+  width: 40px;
+  height: 35px;
+  text-align: center;
+  color: #881d12;
+  font: 20px/1.5 georgia;
+  margin-bottom: 10px;
+  animation: bump 0.3s;
+}
+.vote-count.bumped {
+  animation: bump2 0.3s;
+}
+.vote-btn {
+  appearance: none;
+  border-radius: 3px;
+  border: 0;
+  background: #fff;
+  padding: 15px 12px 15px 40px;
+  font: bold 9px/1.2 arial;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #881d12;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  outline: none;
+  position: relative;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  overflow: hidden;
+}
+.vote-btn .icon {
+  position: absolute;
+  content: "";
+  left: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  background: #881d12 url(https://jamesmuspratt.com/codepen/img/checkmark.svg)
+    no-repeat 2px 1px;
+  background-size: 16px auto;
+  transition: all 0.3s ease-out;
+}
+.vote-btn.complete {
+  padding-left: 15px;
+  background: #c1c0bb;
+  color: #fff;
+}
+.vote-btn.complete .icon {
+  opacity: 0;
+  transform: scale(0);
+  /* transform: rotateX(90deg);
+  */
+}

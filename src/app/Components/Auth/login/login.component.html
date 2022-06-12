@@ -1,0 +1,99 @@
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <div
+        class="login100-form-title"
+        style="background-image: url(../../../../assets/images/bg-01.jpg)"
+      >
+        <span class="login100-form-title-1"> Se Connecter </span>
+      </div>
+
+      <form
+        class="login100-form validate-form"
+        [formGroup]="form"
+        (ngSubmit)="onSubmit()"
+      >
+        <div
+          class="wrap-input100 validate-input m-b-26"
+          data-validate="Username is required"
+        >
+          <span class="label-input100">Email :</span>
+          <input
+            formControlName="email"
+            type="email"
+            class="form-control"
+            name="email"
+            placeholder="Entrer votre Email"
+            required="required"
+            [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+          />
+          <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+            <div style="text-align: left" *ngIf="f['email'].errors['required']">
+              Email is required
+            </div>
+            <div style="text-align: left" *ngIf="f['email'].errors['email']">
+              Email is invalid
+            </div>
+          </div>
+          <span class="focus-input100"></span>
+        </div>
+
+        <div
+          class="wrap-input100 validate-input m-b-18"
+          data-validate="Password is required"
+        >
+          <span class="label-input100">Mot de passe</span>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            placeholder="Entrer votre mot de passe"
+            required="required"
+            formControlName="password"
+            [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+            [type]="hide ? 'password' : 'text'"
+          />
+          <div
+            *ngIf="submitted && f['password'].errors"
+            class="invalid-feedback"
+          >
+            <div
+              style="text-align: left"
+              *ngIf="f['password'].errors['required']"
+            >
+              Password is required
+            </div>
+            <div
+              style="text-align: left"
+              *ngIf="f['password'].errors['minlength']"
+            >
+              Password must be at least 6 characters
+            </div>
+            <div
+              style="text-align: left"
+              *ngIf="f['password'].errors['maxlength']"
+            >
+              Username must not exceed 40 characters
+            </div>
+          </div>
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="flex-sb-m w-full p-b-30">
+          <div class="contact100-form-checkbox">
+            <span href="">Don't have an account?</span
+            ><a href="signup">signup</a>
+          </div>
+
+          <div>
+            <a href="forgetPassword" class="txt1"> Forgot Password? </a>
+          </div>
+        </div>
+
+        <div class="container-login100-form-btn">
+          <button class="login100-form-btn">Se connecter</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
